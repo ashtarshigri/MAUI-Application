@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.EmailVerification"
+             Title="EmailVerification"
+              Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <StackLayout Margin="10" HorizontalOptions="Fill" VerticalOptions="Fill">
+
+            <StackLayout Padding="10">
+                <Image Source="Images/logo.svg"/>
+                <Label
+                    Text="Email Verification!"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="28"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="20"/>
+                <Label
+                    Text="We're sent an email address. Follow the steps provided in the email to update your password or select Log In if you don't want to change your password at this time."
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="15"
+                    TextColor="Grey"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="10,0,10,0"
+                />
+                <!--<Entry x:Name="txtUserName"
+                    Placeholder="Email Address"
+                    Margin="0,20,0,20"
+                    BackgroundColor="Transparent"
+             >
+                </Entry>
+                <Frame CornerRadius="5"
+                   BorderColor="LightGray"
+                   Margin="20,0,20,0">
+                    <StackLayout Orientation="Horizontal">
+                        <CheckBox x:Name="RobotCheckBox"
+                              VerticalOptions="Center"
+                              Color="Grey" />
+                        <Label Text="I'm not a robot"
+                           VerticalOptions="Center"
+                           TextColor="Grey"
+                           Margin="5,0,0,0" />
+                    </StackLayout>
+                </Frame>-->
+
+                <!-- StackLayout to contain the Entry controls -->
+                <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="Center">
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry  x:Name="firstDigitEntry" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" />
+                    </Frame>
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry  x:Name="secondDigitEntry" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20"  />
+                    </Frame>
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry  x:Name="thirdDigitEntry" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20"  />
+                    </Frame>
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry  x:Name="fourthDigitEntry" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20"  />
+                    </Frame>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" Margin="20,0,20,0">
+                <Button x:Name="btnCancel" Text="Cancel"  TextColor="#0E558E" BackgroundColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand" WidthRequest="150" HeightRequest="60" Clicked="btnCancel_Clicked"></Button>
+                <Button x:Name="btnSendButton" Text="Verify" TextColor="White" BackgroundColor="#0E558E"  VerticalOptions="End" HorizontalOptions="EndAndExpand" WidthRequest="150" HeightRequest="60" Clicked="VerifyClicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

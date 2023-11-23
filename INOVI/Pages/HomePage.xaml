@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.Pages.HomePage"
+             Title="Ashtar Shigri"
+             BackgroundColor="White"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Flyout"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <StackLayout>
+        <Frame  CornerRadius="0"
+         BorderColor="LightGray"
+         Padding="10"
+         Margin="0"
+         HeightRequest="50"
+         VerticalOptions="Start"
+         >
+            <StackLayout Orientation="Horizontal">
+                <Label
+             Text="Your Applications"
+             SemanticProperties.HeadingLevel="Level1"
+             FontSize="14"
+             TextColor="Grey"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Start"
+             />
+             <Image HorizontalOptions="EndAndExpand" Source="question.svg" />
+            </StackLayout>
+            
+        </Frame>
+        <Frame CornerRadius="8"
+        BorderColor="LightGray"
+        Padding="10"
+        Margin="10,20,10,0"
+        HeightRequest="115"
+        VerticalOptions="Start"
+        HasShadow="True">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="ApplicationDetailClicked" />
+            </Frame.GestureRecognizers>
+            <StackLayout >
+                <StackLayout Orientation="Horizontal">
+                <Image VerticalOptions="Start" Source="first.svg"/>
+                <Label
+             Text="Application"
+             SemanticProperties.HeadingLevel="Level1"
+             FontSize="20"
+             HorizontalOptions="Start"
+             VerticalOptions="Start"
+             Margin="10,10,0,10"/>
+                </StackLayout>
+                <!--<Label
+                    Text="Approved by CEO"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="10"
+                    TextColor="Grey"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Start"
+                    Margin="10,0,0,0"
+                />-->
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Sed do eiusmod tempor incididunt ut lab ore et       dolore   magna aliqua. Ut eni m ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  aliquip ex ea      commodo   conseq     uat. Lorem ipsum do."
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="14"
+                        TextColor="Grey"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Start"
+                        Margin="45,-10,0,0"
+                        WidthRequest="180"
+                    />
+                    <Label
+                        Text="Rejected"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="StartAndExpand"
+                        Margin="10,-13,0,10"
+                        TextColor="red"
+                        FontAttributes="Bold"
+                    />
+                </StackLayout>
+            </StackLayout>
+            
+
+        </Frame>
+        <Frame CornerRadius="8"
+               BorderColor="LightGray"
+               Padding="10"
+               Margin="10,20,10,0"
+               HeightRequest="115"
+               VerticalOptions="Start"
+               HasShadow="True">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="ApplicationDetail2Clicked" />
+            </Frame.GestureRecognizers>
+            <StackLayout >
+                <StackLayout Orientation="Horizontal">
+                    <Image VerticalOptions="Start" Source="second.svg"/>
+                    <Label
+                        Text="Application"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10,10,0,10"/>
+                </StackLayout>
+                <!--<Label
+             Text="Approved by CEO"
+             SemanticProperties.HeadingLevel="Level1"
+             FontSize="10"
+             TextColor="Grey"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Start"
+             Margin="10,0,0,0"
+         />-->
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Sed do eiusmod tempor incididunt ut lab ore  et        dolore   magna aliqua. Ut eni m ad minim veniam, quis nostrud exercitation ullamco laboris    nisi ut    aliquip ex ea      commodo   conseq     uat. Lorem ipsum do."
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="14"
+                        TextColor="Grey"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Start"
+                        Margin="45,-10,0,0"
+                        WidthRequest="180"
+                    />
+                    <Label
+                        Text="Approved"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="StartAndExpand"
+                        Margin="5,-13,0,10"
+                        TextColor="Green"
+                        FontAttributes="Bold"
+                    />
+                </StackLayout>
+            </StackLayout>
+
+
+        </Frame>
+        <Frame CornerRadius="8"
+               BorderColor="LightGray"
+               Padding="10"
+               Margin="10,20,10,0"
+               HeightRequest="115"
+               VerticalOptions="Start"
+               HasShadow="True">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer  Tapped="ApplicationDetail3Clicked" />
+            </Frame.GestureRecognizers>
+            <StackLayout >
+                <StackLayout Orientation="Horizontal">
+                    <Image VerticalOptions="Start" Source="third.svg"/>
+                    <Label
+                        Text="Application"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        Margin="10,10,0,10"/>
+                </StackLayout>
+                <!--<Label
+             Text="Approved by CEO"
+             SemanticProperties.HeadingLevel="Level1"
+             FontSize="10"
+             TextColor="Grey"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Start"
+             Margin="10,0,0,0"
+         />-->
+                <StackLayout Orientation="Horizontal">
+                    <Label
+                        Text="Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Sed do eiusmod tempor incididunt ut lab ore  et        dolore   magna aliqua. Ut eni m ad minim veniam, quis nostrud exercitation ullamco laboris    nisi ut    aliquip ex ea      commodo   conseq     uat. Lorem ipsum do."
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="14"
+                        TextColor="Grey"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Start"
+                        Margin="45,-10,0,0"
+                        WidthRequest="180"
+                     />
+                    <Label
+                        Text="In-Process"
+                        SemanticProperties.HeadingLevel="Level1"
+                        FontSize="20"
+                        HorizontalOptions="Start"
+                        VerticalOptions="StartAndExpand"
+                        Margin="10,-13,0,10"
+                        TextColor="#B8A022"
+                        FontAttributes="Bold"
+                     />
+                </StackLayout>
+            </StackLayout>
+
+
+        </Frame>
+    </StackLayout>
+</ContentPage>

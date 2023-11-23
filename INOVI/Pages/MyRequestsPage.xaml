@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.Pages.MyRequestsPage"
+             Title="MyRequestsPage">
+    <StackLayout>
+    <Frame  CornerRadius="0"
+            BorderColor="LightGray"
+            Padding="10"
+            Margin="0"
+            HeightRequest="50"
+            VerticalOptions="Start"
+            >
+        <StackLayout>
+            <Label
+                Text="Application ID #123"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="14"
+                TextColor="Grey"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Start"
+                />
+        </StackLayout>
+    </Frame>
+    <Frame CornerRadius="8"
+           BorderColor="LightGray"
+           Padding="10"
+           Margin="10,20,10,0"
+           HeightRequest="300"
+           VerticalOptions="Start"
+           HasShadow="True">
+        <StackLayout>
+            <Label
+                Text="Description"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="30"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                Margin="10,10,0,10"/>
+            <Label
+                Text="Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Sed do eiusmod tempor incididunt ut lab ore et  dolore magna aliqua. Ut eni m ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea   commodo conseq uat. Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Sed do eiusmod tempor incididunt ut  lab ore et dolore magna aliqua. Ut eni m ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut     aliquip ex ea commodo conseq uat."
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="14"
+                TextColor="Grey"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Start"
+                Margin="10,0,0,0"
+            />
+            <Label
+                Text="Approved by CEO"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="10"
+                TextColor="Grey"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Start"
+                Margin="10,0,0,0"
+            />
+        </StackLayout>
+    </Frame>
+        <Frame CornerRadius="8"
+       BorderColor="LightGray"
+       Padding="10"
+       Margin="10,20,10,0"
+       HeightRequest="100"
+       VerticalOptions="Start"
+       HasShadow="True">
+            <ScrollView>
+            <StackLayout  VerticalOptions="Start">
+                <Label Text="Attachments"
+               FontSize="14"
+               TextColor="Black"
+               HorizontalOptions="Start"
+               VerticalOptions="Start"
+               HorizontalTextAlignment="Start"
+               TextDecorations="Underline"
+               Margin="10,0,0,0" />
+
+                <!-- Replace with your preferred attachment button or image -->
+                <!--<Image x:Name="Img" HeightRequest="50" WidthRequest="50" VerticalOptions="StartAndExpand" HorizontalOptions="End" Margin="0,10,0,0"/>-->
+                
+                <StackLayout x:Name="ImageContainer" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Orientation="Horizontal" Margin="0,5,0,0" />
+
+                <!-- Button or Image for adding attachments -->
+                    <Button Text="Add" Clicked="OnAddAttachmentClicked" Margin="10,10,0,0" WidthRequest="100" HorizontalOptions="Start" BackgroundColor="#0E558E" TextColor="White"
+                />
+                
+            </StackLayout>
+            </ScrollView>
+        </Frame>
+
+        <!--<Label
+              Text="Current Status:"
+              SemanticProperties.HeadingLevel="Level1"
+              FontSize="14"
+              TextColor="Black"
+              HorizontalOptions="Start"
+              VerticalOptions="Start"
+              HorizontalTextAlignment="Start"
+              TextDecorations="Underline"
+              Margin="10,20,0,0"
+              
+              />-->
+        <!--<Frame CornerRadius="8"
+       BorderColor="LightGray"
+       Padding="10"
+       Margin="10,20,10,30"
+       HeightRequest="55"
+       VerticalOptions="Start"
+       HasShadow="True">
+            <StackLayout Orientation="Horizontal">
+                <Picker Title="Select an option                                                       "
+                SelectedIndexChanged="OnPickerSelectedIndexChanged" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>In-process</x:String>
+                            <x:String>pending</x:String>
+                            --><!-- Add more options as needed --><!--
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Label Text="▼" FontSize="14" VerticalOptions="Center" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+        </Frame>-->
+
+        <Button Text="Back to dashboard" TextColor="White" BackgroundColor="#BBC0C5" HeightRequest="60" Margin="10,0,10,10" VerticalOptions="EndAndExpand" Clicked="BacktoDashboardButton_Clicked">
+            
+        </Button>
+    </StackLayout>
+</ContentPage>

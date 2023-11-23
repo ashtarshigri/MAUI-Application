@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.Pages.AddApplication"
+             Title="AddApplication">
+    <StackLayout>
+        <Frame  CornerRadius="0"
+                BorderColor="LightGray"
+                Padding="10"
+                Margin="0"
+                HeightRequest="50"
+                VerticalOptions="Start">
+            <StackLayout>
+                <Label
+                     Text="Application ID #123"
+                     SemanticProperties.HeadingLevel="Level1"
+                     FontSize="14"
+                     TextColor="Grey"
+                     HorizontalOptions="Start"
+                     VerticalOptions="Center"
+                     HorizontalTextAlignment="Start"
+                />
+            </StackLayout>
+        </Frame>
+        <Frame CornerRadius="8"
+               BorderColor="LightGray"
+               Padding="10"
+               Margin="10,20,10,0"
+               HeightRequest="300"
+               VerticalOptions="Start"
+               HasShadow="True"
+        >
+            <StackLayout>
+                <Label
+                    Text="Description"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="30"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Margin="10,10,0,10"
+                />
+                <Editor x:Name="editor"
+                        Placeholder="Enter your response here"
+                        HeightRequest="200"
+                        TextChanged="OnEditorTextChanged"
+                        Completed="OnEditorCompleted"
+                        MaxLength="500"
+                        AutoSize="TextChanges"
+                        Keyboard="Chat"
+                        IsSpellCheckEnabled="True"
+                        
+                        
+                />
+                <!--<Label
+                Text="Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Sed do eiusmod tempor incididunt ut lab ore et  dolore magna aliqua. Ut eni m ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea   commodo conseq uat. Lorem ipsum dolor sit amet, con sectetur adipiscing elit. Sed do eiusmod tempor incididunt ut  lab ore et dolore magna aliqua. Ut eni m ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut     aliquip ex ea commodo conseq uat."
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="14"
+                TextColor="Grey"
+                HorizontalOptions="Start"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Start"
+                Margin="10,0,0,0"
+            />-->
+                <Label
+                    Text="0/500"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="10"
+                    TextColor="Grey"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Start"
+                    Margin="10,0,0,0"
+                />
+            </StackLayout>
+        </Frame>
+        <Frame CornerRadius="8"
+               BorderColor="LightGray"
+               Padding="10"
+               Margin="10,20,10,0"
+               HeightRequest="200"
+               VerticalOptions="Start"
+               HasShadow="True"               >
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer x:Name="OnAddAttachment" Tapped="OnAddAttachmentClicked" />
+            </Frame.GestureRecognizers>
+            <ScrollView>
+            <StackLayout  VerticalOptions="Center">
+                <!--<Label Text="Attachments"
+                        FontSize="14"
+                        TextColor="Black"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start"
+                        HorizontalTextAlignment="Start"
+                        TextDecorations="Underline"
+                        Margin="10,0,0,0" 
+             />-->
+                
+                <Image x:Name="Img" Source="upload.svg" HeightRequest="50" WidthRequest="50" VerticalOptions="Center"  HorizontalOptions="Center" Margin="0,0,0,0"
+             />
+
+                <StackLayout x:Name="ImageContainer" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Orientation="Horizontal" Margin="0,5,0,0"
+              />
+                <Label
+                    x:Name="UploadLabel"
+                    Text="Upload Your file / photo"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="15"
+                    TextColor="Grey"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Start"
+                    Margin="10,0,0,0"
+                />
+
+                <Button x:Name="SelectFileButton" Text="Add" Clicked="SelectFileButton_Clicked" Margin="10,10,0,0" WidthRequest="100" HorizontalOptions="Start" BackgroundColor="#0E558E" TextColor="White" IsVisible="False"
+/>
+            </StackLayout>
+            </ScrollView>
+        </Frame>
+
+        <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
+            <Button x:Name="btnCancel" Text="Cancel"  TextColor="#0E558E" BackgroundColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand" WidthRequest="150" HeightRequest="60" Clicked="btnCancel_Clicked" ></Button>
+            <Button x:Name="btnSendButton" Text="Submit" TextColor="White"  BackgroundColor="#0E558E"  VerticalOptions="End" HorizontalOptions="EndAndExpand" WidthRequest="150" HeightRequest="60" Clicked="btnSendButton_Clicked" ></Button>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

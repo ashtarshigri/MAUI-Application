@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.LoginPage"
+             Title="LoginPage"
+              Shell.NavBarIsVisible="False"
+             >
+    <ScrollView>
+    <StackLayout Margin="10" HorizontalOptions="Fill" VerticalOptions="Fill">
+        <ScrollView>
+        <StackLayout Padding="10">
+
+
+            <Image Source="Images/logo.svg"/>
+
+
+            <Label
+            Text="Welcome back"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="30"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Margin="20"/>
+
+                <Entry x:Name="txtUserName"
+                       Placeholder="Email Address"
+                       Margin="0,20,0,20"
+                       BackgroundColor="Transparent"
+                     >
+                </Entry>
+
+                <Entry x:Name="txtPassword"
+                       Placeholder="Password"
+                       IsPassword="True"
+                       Margin="0,20,0,20"
+                       BackgroundColor="Transparent"
+                      >
+                </Entry>
+
+                <Button x:Name="btnLogin" Text="Login in" Clicked="Login_Clicked" TextColor="White" BackgroundColor="#0E558E" HeightRequest="60"></Button>
+
+
+            <StackLayout Orientation="Horizontal"  Margin="0,20,0,0">
+                    <Label Text="Forgot Password?" TextColor="#0E558E"  HorizontalOptions="Start" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnForgotPasswordTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                    <Label Text="Not you?" TextColor="#0E558E" HorizontalOptions="EndAndExpand" />
+            </StackLayout>
+
+
+
+        </StackLayout>
+       </ScrollView>
+
+        <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+            <Label Text="Don't have an account?"/>
+            <Label Text=" Sign Up"
+                    TextColor="#0E558E"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    VerticalTextAlignment="End">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSignupTapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>   
+    
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
